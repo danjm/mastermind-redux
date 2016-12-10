@@ -1,0 +1,241 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .game-column {
+      height: 550px;
+      width: 275px;
+      border: 1px solid black;
+      float: left;
+    }
+    
+    .select-peg-column {
+      width: 45px;
+      float: left;
+      margin-left: 5px;
+    }
+    
+    .pegs {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: white;
+      margin-left: 2%;
+      border: 1px solid black;
+      float: left;
+    }
+    
+    .little-peg {
+      width: 15px;
+      height: 15px;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+    
+    .peg-row {
+      width: 97%;
+      height: 7.4%;
+      background-color: #75cbe1;
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-top: 1%;
+      padding-top: 2px;
+      padding-left: 2px;
+    }
+    
+    .peg-to-select {
+      margin-top: 4%;
+    }
+    
+    .little-peg-box {
+      height: 36px;
+      width: 36px;
+      float: left;
+      margin-right: 2%;
+    }
+    
+    .check {
+      float: left;
+      margin-left: 7%;
+      margin-right: 7%;
+      margin-top: 4%;
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <div data-reactroot="">
+    <div>
+      <div class="game-column">
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: seagreen;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg" style="background: red;"></div>
+            <div class="pegs little-peg" style="background: red;"></div>
+            <div class="pegs little-peg" style="background: black;"></div>
+            <div class="pegs little-peg" style="background: black;"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+        <div class="peg-row">
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="pegs"></div>
+          <div class="check"><i class="fa fa-check-circle-o" style="color: grey;" aria-hidden="true"></i></div>
+          <div class="little-peg-box">
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+            <div class="pegs little-peg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="select-peg-column">
+        <div class="pegs peg-to-select" style="background: #e982ff;"></div>
+        <div class="pegs peg-to-select" style="background: #FFC107;"></div>
+        <div class="pegs peg-to-select" style="background: #00BCD4;"></div>
+        <div class="pegs peg-to-select" style="background: #5ee463;"></div>
+        <div class="pegs peg-to-select" style="background: #FFEB3B;"></div>
+        <div class="pegs peg-to-select" style="background: #ff584b;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="client-bundle.js"></script>
+
+</body>
+</html>
