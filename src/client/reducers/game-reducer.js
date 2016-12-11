@@ -1,5 +1,5 @@
-import { extend, pick } from 'lodash';
-import { SELECT_PEG } from '../actions/peg-actions';
+import { cloneDeep, extend, pick, set } from 'lodash';
+import { SELECT_PEG, SET_PEG } from '../actions/peg-actions';
 import { LOG_STATE } from '../actions/button-actions';
 
 const initialState = {
@@ -10,16 +10,21 @@ const initialState = {
 };
 
 const gameReducer = (state = initialState, action) => {
+	const nextState = cloneDeep(state);
+
 	switch (action.type) {
 	case LOG_STATE:
 		console.info('--------------------');
-		console.info('state', state);
+		console.info('nextState', nextState);
 		console.info('--------------------');
-		return state;
+		return nextState;
 	case SELECT_PEG:
-		return extend({}, state, pick(action, 'selectedPeg'));
+		return extend({}, nextState, pick(action, 'selectedPeg'));
+	case SET_PEG:
+		set(nextState, `rows.${nextState.activeRow}.${action.clickedPeg}`, nextState.selectedPeg);
+		return nextState;
 	default:
-		return state;
+		return nextState;
 	}
 };
 

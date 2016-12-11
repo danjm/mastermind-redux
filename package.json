@@ -64,6 +64,10 @@
       "react/jsx-indent": [
         2,
         "tab"
+      ],
+      "react/jsx-indent-props": [
+        1,
+        "tab"
       ]
     }
   }

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Peg from '../components/peg';
+import SelectPeg from '../components/select-peg';
 import { selectPeg } from '../actions/peg-actions';
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
@@ -7,4 +7,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 	selectedPeg: ownProps.num
 });
 
-export default connect(null, mapDispatchToProps)(Peg);
+export default connect(null, mapDispatchToProps)(SelectPeg);
