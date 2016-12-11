@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import GamePeg from '../containers/game-peg';
+import Checkmark from '../containers/checkmark';
 
 const regRowStyle = {
 	width: '97%',
@@ -17,6 +18,7 @@ const PegRow = ({ rowNum }) => (<div style={regRowStyle} >
 	<GamePeg num={1} row={rowNum} />
 	<GamePeg num={2} row={rowNum} />
 	<GamePeg num={3} row={rowNum} />
+	<Checkmark row={rowNum} />
 </div>);
 
 PegRow.propTypes = {
