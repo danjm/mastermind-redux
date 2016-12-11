@@ -1,5 +1,6 @@
 import React from 'react';
-import GamePeg from '../containers/game-peg';
+import { map, range } from 'lodash';
+import PegRow from '../containers/peg-row';
 
 const gameColumnStyle = {
 	height: '550px',
@@ -8,11 +9,10 @@ const gameColumnStyle = {
 	float: 'left'
 };
 
+const pegRows = map(range(0, 12), num => <PegRow key={`'pegRow'${num}`} rowNum={num} />);
+
 const GameColumn = () => (<div style={gameColumnStyle} >
-	<GamePeg num={0} row={0} />
-	<GamePeg num={1} row={0} />
-	<GamePeg num={2} row={0} />
-	<GamePeg num={3} row={0} />
+	{pegRows}
 </div>);
 
 export default GameColumn;
