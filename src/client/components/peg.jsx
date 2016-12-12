@@ -9,19 +9,22 @@ const pegStyle = pegNumber => ({
 	borderRadius: '50%',
 	background: get(colours, pegNumber, 'white'),
 	marginLeft: '2%',
-	border: '1px solid black',
+	border: `${pegNumber < 0 ? 0 : 1}px solid black`,
 	float: 'left'
 });
 
-const Peg = ({ setPeg, pegColour, clickedPeg }) => <button
-	style={pegStyle(pegColour)}
-	onClick={() => { setPeg(clickedPeg); }}
-/>;
+const Peg = ({ selectPeg, selectedPeg, colourNum, children }) =>
+	<button
+		style={pegStyle(colourNum)}
+		onClick={() => { selectPeg(selectedPeg); }}
+	>{children}
+	</button>;
 
 Peg.propTypes = {
-	setPeg: PropTypes.func.isRequired,
-	pegColour: PropTypes.number,
-	clickedPeg: PropTypes.number
+	selectPeg: PropTypes.func.isRequired,
+	selectedPeg: PropTypes.number.isRequired,
+	children: PropTypes.element,
+	colourNum: PropTypes.number
 };
 
 export default Peg;
