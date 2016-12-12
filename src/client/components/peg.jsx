@@ -9,7 +9,7 @@ const pegStyle = pegNumber => ({
 	borderRadius: '50%',
 	background: get(colours, pegNumber, 'white'),
 	marginLeft: '2%',
-	border: `${pegNumber < 0 ? 0 : 1}px solid black`,
+	border: `${pegNumber === null ? 0 : 1}px solid black`,
 	float: 'left'
 });
 
@@ -22,7 +22,7 @@ const Peg = ({ selectPeg, selectedPeg, colourNum, children }) =>
 
 Peg.propTypes = {
 	selectPeg: PropTypes.func.isRequired,
-	selectedPeg: PropTypes.number.isRequired,
+	selectedPeg: PropTypes.number,
 	children: PropTypes.element,
 	colourNum: PropTypes.number
 };
