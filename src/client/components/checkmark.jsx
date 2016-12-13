@@ -10,11 +10,15 @@ const checkmarkStyle = {
 
 const checkmarkColour = active => ({ color: active ? 'seagreen' : 'grey' });
 
-const Checkmark = ({ active }) => <div style={checkmarkStyle}>
-	<FaCheckCircleO style={checkmarkColour(active)} aria-hidden="true" />
+const Checkmark = ({ active, submitGuess }) => <div style={checkmarkStyle}>
+	<FaCheckCircleO
+		style={checkmarkColour(active)}
+		onClick={() => submitGuess()}
+	/>
 </div>;
 
 Checkmark.propTypes = {
+	submitGuess: PropTypes.func.isRequired,
 	active: PropTypes.bool.isRequired
 };
 
