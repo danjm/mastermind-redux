@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import GamePeg from '../containers/game-peg';
 import Checkmark from '../containers/checkmark';
+import ResultPegBox from '../components/result-peg-box';
 
 const pegRowStyle = isActive => ({
 	width: isActive ? '96%' : '97%',
@@ -20,6 +21,7 @@ const PegRow = ({ activeRow, rowNum }) => (<div style={pegRowStyle(activeRow ===
 	<GamePeg num={2} row={rowNum} />
 	<GamePeg num={3} row={rowNum} />
 	<Checkmark row={rowNum} />
+	<ResultPegBox rowNum={rowNum} />
 </div>);
 
 PegRow.propTypes = {
